@@ -41,9 +41,15 @@ function printStairs(n) {
 
 
 //task4
-function sumRange(start, end) {
-  ???
-}
+  let rangeSum = function(start,end){
+
+    let arr = [];
+    for (let i = start; i <= end; i++) 
+        arr.push(i);
+    return arr.reduce(function(a,b){
+        return a + b;   
+    });
+};
 
 
 
@@ -111,9 +117,15 @@ function toUppercase(str) {
 
 
 //task10
-
-???
-
+function removeDuplicateCharacters(str) {
+    return str
+      .split('')
+      .filter(function(item, pos, self) {
+        return self.indexOf(item) == pos;
+      })
+      .join('');
+  }
+  console.log(removeDuplicateCharacters('Hello I am Iron Man'));
 
 
 
